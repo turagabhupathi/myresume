@@ -69,7 +69,7 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto" onclick="selectstart()"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
           <li><a href="#awards" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Achievements</span></a></li>
           <li><a href="#certificates" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Certificates</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
@@ -272,7 +272,7 @@
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter=".filter-vpt" >VPT Field Reports</li>
+              <li data-filter=".filter-vpt" id="filter-vpt" onclick="selectstart(this.id)">VPT Field Reports</li>
               <li data-filter=".filter-sellc" >Selltez Customer</li>
               <li data-filter=".filter-kronos">Kronos</li>
               <li data-filter=".filter-sellv">Selltez Vendor</li>
@@ -862,6 +862,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function selectstart(str) {
+      var element = document.getElementById(str);
+      if (!element.classList.contains("filter-active")) {
+    element.classList.add("filter-active");
+  }
+
+}
+  </script>
 
 </body>
 
